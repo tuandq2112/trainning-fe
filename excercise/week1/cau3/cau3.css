@@ -1,0 +1,40 @@
+#div_tong {
+    border: 1px solid green;
+    width: 800px;
+    height: 400px;
+}
+#div_tong > .trai {
+    /* background-color: red; */
+    width: 500px;
+    height: 400px;
+    float:left;
+}
+#div_tong > .ke_doc_dut {
+    border: 1px dashed green ;
+    border-width: thin;
+    width: 0px;
+    height: 350px;
+    float:left;
+    margin-top: 25px;
+}
+#div_tong > .phai {
+    /* background-color: yellow; */
+    width: 295px;
+    height: 400px;
+    float:left;
+    position: relative;
+    right:0;
+}
+#heading {
+    color: green;
+    font-size: 27px;
+    text-align: center;
+    padding-top: 0px;
+    font-weight: bolder;
+}
+
+ul{
+    margin-top: -10px;
+    list-style-image: url(../images/banana.png);
+    list-style-position:
+}
