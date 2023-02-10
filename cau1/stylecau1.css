@@ -1,0 +1,15 @@
+
+.abc {
+    background-color: rgb(168, 159, 159);
+    color:red;
+}
+.qwe{
+    text-align: right;
+}
+
+body{
+    margin-left: 150px;
+    margin-right: 150px;
+    font-size: 18px;
+}
+

@@ -1,0 +1,28 @@
+body{
+    margin-left: 150px;
+    margin-right: 150px;
+    font-size: 20px;
+    background-image: url("bg.gif");
+}
+caption{
+    font-size:30px;
+    color:green;
+}
+table {
+    border-collapse: collapse;
+
+    width: 100%;
+    background-image: url("bg2.gif");
+}
+  
+th {
+    height: 70px;
+}
+th{
+    background-color: #18e018;
+}
+tr:nth-child(odd) {background-color: #a3f05c;}
+
+.tong{
+    text-align: right;
+}
