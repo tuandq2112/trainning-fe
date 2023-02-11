@@ -1,0 +1,45 @@
+body{
+    background-image:url(bg.gif);
+    margin: 60px 60px ;
+}
+
+
+table, th, td{
+    border:1px solid rgb(24, 194, 55);
+    
+}
+table{
+   
+    margin-left: 150px;
+    text-align: left;
+    background-image:url(bg2.gif);
+    border-collapse: collapse;
+}
+
+.tieude{
+    background-color: rgb(147, 194, 83);
+    color: white;
+}
+
+.chan{
+    background-color: rgb(214, 225, 190);
+}
+
+.giua{
+    width: 500px; 
+}
+h1{
+    font-size: 40px;
+    color: rgb(27, 189, 27);
+    text-align: center;
+    padding-top: 20px;
+}
+
+a{
+    color: blue;
+}
+
+a:hover{
+
+    color: brown;
+}
