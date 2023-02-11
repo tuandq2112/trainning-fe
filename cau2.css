@@ -1,5 +1,5 @@
 h1{
-    color: rgb(25, 234, 105);
+    color: rgb(139, 234, 105);
 }
 thead{
     color: aliceblue;
@@ -12,7 +12,4 @@ body{
 }
 th{
     background-color: rgb(139, 224, 29);
-}
-tbody{
-    background-image: url(bg2.gif);
 }
