@@ -23,9 +23,6 @@
 
 #khung_phai{
     box-sizing: border-box ;
-    float:left;
-    position: relative;
-    right:0;
     text-align: left;
 }
 
