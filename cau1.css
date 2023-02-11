@@ -1,0 +1,16 @@
+body,ul{
+    border: 2px solid rgb(248, 243, 243);
+}
+body{
+    width: 850px;
+    max-width: 1000px;
+    min-width: 500px;
+    margin:0px auto;
+}
+img{
+    margin-right: 10px;
+}
+span{
+    background-color: rgb(234, 243, 243);
+    box-shadow: 1px 1px #666;
+}

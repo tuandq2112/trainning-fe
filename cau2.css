@@ -1,0 +1,18 @@
+h1{
+    color: rgb(25, 234, 105);
+}
+thead{
+    color: aliceblue;
+}
+body{
+    width: 850px;
+    max-width: 1200px;
+    min-width: 700px;
+    margin: 0px auto;
+}
+th{
+    background-color: rgb(139, 224, 29);
+}
+tbody{
+    background-image: url(bg2.gif);
+}
