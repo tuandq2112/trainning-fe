@@ -1,0 +1,25 @@
+ul
+{
+    list-style-image: url(banana.png);
+    list-style-position: inside;
+    text-align: right;
+}
+.bang
+{
+    border: solid 3px;
+    border-color: green;
+    margin: auto;
+}
+.cot2
+{
+    border-left: dashed 2px;
+    margin-right: 15px;
+}
+.cot1
+{
+    margin: auto;
+}
+.cachang
+{
+    text-align: left;
+}
