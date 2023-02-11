@@ -1,0 +1,36 @@
+.container {
+    display: flex;
+    opacity: 1;
+    border: 3px solid #15b21f;
+    align-items: center;
+}
+
+#heading {
+    color: darkgreen;
+    font-size: 30px;
+    
+}
+
+header {
+    margin-left: 30px;
+}
+
+
+p {
+    margin-left: 30px;
+}
+
+.element1 {
+    border-left: 2px dotted #15b21f;
+    margin-left: 30px
+}
+
+reset css *
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; 
+} 
+
+
+
