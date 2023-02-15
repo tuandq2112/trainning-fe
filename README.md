@@ -18,3 +18,8 @@
     <li>git push</li>
 </ol>
 
+## Pull code bài tập tuần mới
+<ol>
+    <li>git checkout develop</li>
+    <li>git pull</li>
+</ol>
