@@ -1,0 +1,14 @@
+
+
+
+input {
+  width: 100px;
+  font-size: 20px;
+}
+
+
+#No {
+  position: absolute;
+ 
+  transition: 0.3s;
+}

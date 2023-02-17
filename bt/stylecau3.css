@@ -1,8 +1,15 @@
-body{
+
+#khungngoai{
     border-style: solid;
     font-size: 20px;
     border-color: green;
-    width: 100%;
+    width: 90vw;
+}
+#khungtrai{
+  border-style: solid;
+  border-color: green;
+  float: left
+  
 }
 ul,h1 {
     list-style-image: url('banana.png');
