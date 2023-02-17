@@ -14,7 +14,7 @@
 
 <ol>
     <li>git add .</li>
-    <li>git commit -m "Mô tả về commit"</li>
+    <li>git commit -m "le chi cong"</li>
     <li>git push</li>
 </ol>
 
