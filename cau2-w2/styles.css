@@ -1,0 +1,31 @@
+button,p{
+    font-size: 40px;
+    margin: 20px;
+    
+}
+p {
+    margin-left: 20px;
+}
+
+.hoi{
+    border: 3px solid rgb(148, 54, 54);
+    width: 600px;
+    height: 60px;
+    
+
+}
+
+.co, .khong{
+    border: 3px solid red;
+    height: 150px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+
+.khong{
+    position: absolute;
+}
