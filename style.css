@@ -1,0 +1,70 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+
+}
+body{
+    background-color: orange;
+}
+@font-face {
+    font-family: simplecode;
+    src: url(./digital-7.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+.container{
+    margin: 10px auto;
+    width: 200px;
+}
+.screen{
+    background-color: white;
+    width:100%;
+    height: 50px;
+    position:relative;
+    overflow: hidden;
+}
+.keyboard{
+    width:100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.item{
+    height: 50px;
+    outline: none;
+    border: 0,1 solid rgb(212, 212, 212);
+
+}
+.item:hover{
+    background-color: bisque;
+    cursor:pointer;
+}
+.item1{
+    grid-column: 1/span 2;
+    background-color: hotpink;
+
+}
+.item1:hover{
+    background-color: brown;
+}
+.item2{
+    background-color: crimson;
+}
+.item2:hover{
+    background-color: blueviolet;
+}
+.screen .input,
+.screen .overlay{
+    position:absolute;
+    top:0;
+    right:5px;
+    font-size: 40px;
+    color: darkslategray;
+    z-index: 222;
+    font-family: simplecode;
+}
+.screen .overlay{
+    background-color: rgb(231, 231, 231,0.7);
+
+}
