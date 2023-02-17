@@ -1,0 +1,52 @@
+
+#heading {
+    color: green;
+    font-size: 50px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif ;
+    text-align: center;
+}
+
+table{
+    background-image: url(bg2.gif);
+    margin: auto;
+    width: 1000px;
+    height: 650px;
+    outline: 1px solid rgb(56, 146, 56);
+    border-spacing: 0;
+    text-align: center;
+    
+}
+th{
+    border:1px solid rgb(56, 146, 56);
+    font-family: Arial, Helvetica, sans-serif ;
+    outline: 1px solid rgb(56, 146, 56);
+}
+td{
+    border:1px solid rgb(56, 146, 56);
+    font-family: Arial, Helvetica, sans-serif ;
+    outline: 1px solid rgb(56, 146, 56);
+}
+
+thead {
+    background-color: rgb(56, 146, 56);
+    font-family: Arial, Helvetica, sans-serif ;
+    color: white;
+}
+.nen_trang{
+    background-color: rgba(white);
+}
+.nen_xanhla{
+    background-color:rgb(167, 192, 167);
+}
+
+/* .cot2{
+    text-align: left;
+    
+}
+.cot3{
+    text-align: center;
+}
+.cot5 {
+    text-align: right;
+} */

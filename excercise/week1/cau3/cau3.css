@@ -1,0 +1,51 @@
+#khung_ngoai{
+    border: 2px solid green;
+    margin: auto;
+    width: 90vw;
+    height: 90vh;
+}
+
+#khung_trai{
+    float: left;
+    width: 65%;
+    height: 100%;
+    padding-left: 2em;
+}
+#anhchuoi{
+    margin-top: 3%;
+    margin-left: 3%;
+    width: 90%;
+    height: 90%;
+}
+
+#vien_giua{
+    border: 1px dashed green;
+    float: left;
+    margin-top: 2%;
+    width: 0%;
+    height: 90%;
+
+}
+
+#khung_phai{
+    float: left;
+    box-sizing: border-box;
+    width: 30%;
+    height: 100%;
+    padding-left: 2em;
+}
+
+#title{
+    font-size: 5vh;
+    color: green;
+    text-align: left;
+    left: 10px;
+
+}
+
+ul{
+    list-style-image: url(banana.png);
+    list-style-position: inside;
+    text-align: left;
+    font-size: 3vh;
+}
