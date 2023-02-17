@@ -56,7 +56,6 @@ body{
 }
 .screen .input,
 .screen .overlay{
-    position:absolute;
     top:0;
     right:5px;
     font-size: 40px;
@@ -66,5 +65,5 @@ body{
 }
 .screen .overlay{
     background-color: rgb(231, 231, 231,0.7);
-
+    overflow:hidden;
 }
