@@ -1,3 +1,4 @@
+# hithere
 # Hướng dẫn sử dụng git
 
 ## Tạo nhánh mới trên repo
@@ -23,3 +24,5 @@
     <li>git checkout develop</li>
     <li>git pull</li>
 </ol>
+
+
