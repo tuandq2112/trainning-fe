@@ -6,18 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href ="cau22.css">
-<body>
-    <h1>Cậu có đồng ý làm người yêu tớ không ?</h1>
-    <h2 onclick="myFunction()">Có</h2>
-    <h3 id="demo"></h3>
-    <h4 onclick="congFunction()">Không</h4>
-    <h5 id="cong"></h5>
-    
-</body>
-<script src="cau22.js"></script>
+    <script src="cau22.js"></script>
 <script>
     function myFunction() {
       document.getElementById("demo").innerHTML = "Tớ biết mà :33";
     }
+
+    function randomMove(){
+        console.log("click");
+        let { innerWidth, innerHeight } = window;
+        let element = document.getElementById("move");
+        element.style.left= `${Math.ceil(Math.random()*innerWidth)}px`;
+        element.style.top= `${Math.ceil(Math.random()*innerHeight)}px`;
+    }
     </script>
+<body>
+    <h1>Cậu có đồng ý làm người yêu tớ không ?</h1>
+    <h2 onclick="myFunction()">Có</h2>
+    <h3 id="demo"></h3>
+    <h4 id ="move" onclick="randomMove()">Không</h4>
+    <h5 id="cong"></h5>
+    
+</body>
+
 </html>
