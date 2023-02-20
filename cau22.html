@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Confirm Dialog</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			font-size: 16px;
+			color: #333;
+			margin: 0;
+			padding: 0;
+		}
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			background-color: #f2f2f2;
+		}
+		.dialog-box {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			padding: 32px;
+			background-color: #fff;
+			box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+		}
+		.dialog-box h2 {
+			margin-top: 0;
+			margin-bottom: 16px;
+		}
+		.dialog-box p {
+			margin-top: 0;
+			margin-bottom: 32px;
+		}
+		.button-group {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			gap: 16px;
+		}
+		.button {
+			padding: 12px 24px;
+			background-color: #4285F4;
+			color: #fff;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+		.button:hover {
+			background-color: #2B73E9;
+		}
+		.no-button {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			margin: 16px;
+			padding: 8px;
+			background-color: #FF5252;
+			color: #fff;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+			transition: all 0.3s ease-in-out;
+		}
+		.no-button:hover {
+			transform: translate(-20px, -20px);
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="dialog-box">
+			<h2>Confirm Action</h2>
+			<p>Có làm người yêu tớ không </p>
+			<div class="button-group">
+				<button class="button">Yes</button>
+                <button class="no-button">Không</button>
+                <div class="message" style="display:none">
+                    Tôi biết mà =)))
+                  </div>
+			</div>
+		</div>
+	
+	</div> 
+</body>
+
+<script>
+    const noButton = document.querySelector('.no-button');
+    const container = document.querySelector('.container');
+    const yesButton = document.querySelector('.button');
+
+yesButton.addEventListener('click', () => {
+  yesButton.style.display = 'none';
+  document.querySelector('.message').style.display = 'block';
+});
+    noButton.addEventListener('mouseenter', () => {
+container.style.cursor = 'not-allowed';
+noButton.style.transform = 'translate(20px, 20px)';
+});
+noButton.addEventListener('mouseleave', () => {
+		container.style.cursor = 'default';
+		noButton.style.transform = 'translate(0, 0)';
+	});
+</script>
+</body>
+</html>
