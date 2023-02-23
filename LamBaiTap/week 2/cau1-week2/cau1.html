@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator - SIP LAB</title>
+    <link rel="stylesheet" href="cau1.css">
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" placeholder="0" id="ket_qua">
+        <div>
+            <button onclick="them('1')">1</button>
+            <button onclick="them('2')">2</button>
+            <button onclick="them('3')">3</button>
+            <button onclick="them('+')">+</button>
+        </div>
+        <div>
+            <button onclick="them('4')">4</button>
+            <button onclick="them('5')">5</button>
+            <button onclick="them('6')">6</button>
+            <button onclick="them('-')">-</button>
+        </div>
+        <div>
+            <button onclick="them('7')">7</button>
+            <button onclick="them('8')">8</button>
+            <button onclick="them('9')">9</button>
+            <button onclick="them('*')">x</button>
+        </div>
+        <div>
+            <button onclick="DEL()">DEL</button>
+            <button onclick="them('0')">0</button>
+            <button onclick="CLR()">CLR</button>
+            <button onclick="them('%')">%</button>
+        </div>
+        <div>
+            <button onclick="bang()">=</button>
+        </div>
+    </div>
+    <script src="cau1.js"></script>
+</body>
+</html>
