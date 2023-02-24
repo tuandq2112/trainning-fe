@@ -43,7 +43,19 @@ function sumVowel(input) {
 // "01011001" => "11"
 // ví dụ đầu vào: sumNumber("111");sumNumber("101");
 function binaryMax(input) {
-  return "";
+  let max = 0;
+  let count = 0;
+  for (let x = 0; x < input.length; x++) {
+    if (input.charAt(x) === "1") {
+      count++;
+    } else {
+      max = Math.max(max, count);
+      count = 0;
+    }
+  }
+  max = Math.max(max, count);
+  let binary = "1".repeat(max);
+  return binary;
 }
 
 // bài 4
@@ -53,7 +65,13 @@ function binaryMax(input) {
 // [1,2,3,4] => 3 (vì 3 không là ước cộng lại là 3)
 // ví dụ đầu vào: sumNotFour([1,2,3,4]);sumNotFour([1,1,1,1]);
 function sumNotFour(arr) {
-  return 0;
+  let sum =0;
+  for (let x = 0; x < arr.length; x++) {
+    if ( 4% arr[x]  !== 0) {
+      sum += arr[x];
+    }
+  }
+  return sum;
 }
 
 // bài 5
@@ -64,8 +82,7 @@ function sumNotFour(arr) {
 // [1,1,2,3,2] => [1,2,3]
 // ví dụ đầu vào: uniqueArr([1]);uniqueArr([1,1,1,1,2]);
 function uniqueArr(arr) {
-  document.getElementById("arr").innerHTML = points;
-  points.sort(function(a,b)[return a - b]);
+  return [];
 }
 
 // bài 6
@@ -76,7 +93,13 @@ function uniqueArr(arr) {
 // [0,1,0,1] vs [0,1,2,3] => 2 (vị trí thứ 1 và 2 giống nhau)
 // ví dụ đầu vào: equalTwoArr(2,[1,2],[1,3]);equalTwoArr(3,[1,2,3],[1,3,3]);
 function equalTwoArr(arr1, arr2) {
-  return 0;
+  let count = 0; 
+  for (let x=0; x < arr1.length; x++){
+    if (arr1[x] ===arr2[x]){
+      count++;
+    }
+  }
+  return count;
 }
 
 // bài 7
