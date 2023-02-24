@@ -18,7 +18,7 @@ function sumNumber(input) {
     sum += int[i];
   }
   console.log(sum);
-  return 0;
+  return sum;
 }
 
 // bài 2
@@ -39,7 +39,7 @@ function sumVowel(input) {
     }
   }
   console.log(number + " nguyên âm");
-  return 0;
+  return number;
 }
 
 // bài 3
@@ -49,8 +49,27 @@ function sumVowel(input) {
 // "10111011" => "111"
 // "01011001" => "11"
 // ví dụ đầu vào: sumNumber("111");sumNumber("101");
-function binaryMax(input) {
-  return "";
+function binaryMax(input) { 
+  let max = [];
+  let check = [];
+  for(let i = 0; i < input.length; i++)
+  {
+    if(input[i] === "1")
+    {
+      check += "1";
+    }
+    else
+    {
+      if(check.length > max.length)
+      {
+        max = check;
+      }
+      check = "";
+    }
+
+  }
+  console.log(max)
+  return max;
 }
 
 // bài 4
@@ -68,7 +87,7 @@ function sumNotFour(arr) {
     }
   }
   console.log(sum);
-  return 0;
+  return sum;
 }
 
 // bài 5
@@ -117,7 +136,7 @@ function uniqueArr(arr) {
     }
   }  
   console.log(newArr)
-  return [];
+  return newArr;
 }
 
 // bài 6
@@ -137,7 +156,7 @@ function equalTwoArr(arr1, arr2) {
     }
   }
   console.log(count);
-  return 0;
+  return count;
 }
 
 // bài 7
@@ -171,7 +190,7 @@ function mergeArr(arr1, arr2) {
     }
   }
   console.log(mergeNew);
-  return [];
+  return mergeNew;
 }
 
 export default {
