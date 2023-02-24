@@ -6,7 +6,12 @@
 // "111" => 3
 // ví dụ đầu vào: sumNumber("1");sumNumber("45");
 function sumNumber(input) {
-  return 0;
+  let arr= input.split('').map(Number);
+  let sum = 0;
+  for (let i = 0; i < input.length; i++){
+    sum += arr[i]
+  }
+  return sum;
 }
 
 // bài 2
@@ -17,7 +22,17 @@ function sumNumber(input) {
 // "lam quen voi chuoi va mang" => 8 nguyên âm
 // ví dụ testcase: sumVowel("vidu");sumVowel("colen");
 function sumVowel(input) {
-  return 0;
+  var vowel_list = 'aeiou';
+  var sumVowel = 0;
+  for(var x = 0; x < input.length ; x++)
+  {
+    if (vowel_list.indexOf(input[x]) !== -1)
+  {
+    sumVowel +=1 ;
+  }
+  }
+
+  return sumVowel ;
 }
 
 // bài 3
@@ -49,7 +64,8 @@ function sumNotFour(arr) {
 // [1,1,2,3,2] => [1,2,3]
 // ví dụ đầu vào: uniqueArr([1]);uniqueArr([1,1,1,1,2]);
 function uniqueArr(arr) {
-  return [];
+  document.getElementById("arr").innerHTML = points;
+  points.sort(function(a,b)[return a - b]);
 }
 
 // bài 6
