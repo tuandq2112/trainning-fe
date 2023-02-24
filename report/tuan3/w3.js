@@ -5,14 +5,14 @@
 // "123123123" => 18
 // "111" => 3
 // ví dụ đầu vào: sumNumber("1");sumNumber("45");
-function sumNumber(input) {
+function sumNumber(input){
   let arr= input.split('').map(Number);
   let sum = 0;
   for (let i = 0; i < input.length; i++){
      sum += arr[i];
 }
      
-  return sum;
+    return sum;
 }
 
 // bài 2
@@ -22,16 +22,17 @@ function sumNumber(input) {
 // "hoc javascript that la vui" => 7 nguyên âm
 // "lam quen voi chuoi va mang" => 8 nguyên âm
 // ví dụ testcase: sumVowel("vidu");sumVowel("colen");
-function sumVowel(input) {
+function  sumVowel(input) {
   let count = 0;
   for (let i = 0; i <input.length; i++){
     let char = input.charAt(i);
-   if(char === "u" || char === "e" || char === "o" || char === "a" || char === "i" ){
+   if(char[i] === "u" || char[i] === "e" || char[i] === "o" || char[i] === "a" || char[i] === "i" ){
     count++;
    }
   }
   return count;
 }
+
 // bài 3
 // Chuỗi nhị phân dài nhất
 // Cho chuối nhị phân. yêu cầu trả ra chuỗi nhị phân của 1 dài nhất
@@ -40,24 +41,7 @@ function sumVowel(input) {
 // "01011001" => "11"
 // ví dụ đầu vào: sumNumber("111");sumNumber("101");
 function binaryMax(input) {
-  let count = 0;
-  let maxCount = 0;
-  let result = '';
-  
-  for (let i = 0; i < input.length; i++) {
-    if (input[i] === '1') {
-      count++;
-    } else {
-      count = 0;
-    }
-
-    if (count > maxCount) {
-      maxCount = count;
-      result = '1'.repeat(count);
-    }
-  }
-
-  return result;
+  return "";
 }
 
 // bài 4
@@ -67,13 +51,7 @@ function binaryMax(input) {
 // [1,2,3,4] => 3 (vì 3 không là ước cộng lại là 3)
 // ví dụ đầu vào: sumNotFour([1,2,3,4]);sumNotFour([1,1,1,1]);
 function sumNotFour(arr) {
-  let sum =0;
-  for ( let i = 0; i < arr.length ; i++){
-    if( 4 % arr[i] !==0){
-      sum += arr[i];
-    }
-  }
-  return sum;
+  return 0;
 }
 
 // bài 5
@@ -84,12 +62,9 @@ function sumNotFour(arr) {
 // [1,1,2,3,2] => [1,2,3]
 // ví dụ đầu vào: uniqueArr([1]);uniqueArr([1,1,1,1,2]);
 function uniqueArr(arr) {
-  arr.sort(function(a,b){return a - b});
-  return arr.filter(function(item , index){
-    return arr.indexOf(item) === index; 
-  });
-  }
-  
+  return [];
+}
+
 // bài 6
 // cho 2 mảng có kích thước như nhau,
 // hãy trả ra số các phần tử giống nhau ở cùng 1 vị trí trong mảng
@@ -98,14 +73,7 @@ function uniqueArr(arr) {
 // [0,1,0,1] vs [0,1,2,3] => 2 (vị trí thứ 1 và 2 giống nhau)
 // ví dụ đầu vào: equalTwoArr(2,[1,2],[1,3]);equalTwoArr(3,[1,2,3],[1,3,3]);
 function equalTwoArr(arr1, arr2) {
-  let count = 0;
-  for (let i = 0; i < arr1.length; i++){
-    
-    if(arr1[i] === arr2[i]){
-      count++;
-    }
-  }
-  return count;
+  return 0;
 }
 
 // bài 7
@@ -116,11 +84,7 @@ function equalTwoArr(arr1, arr2) {
 // [10,2] và [3,6,7] => [2,3,6,7,10]
 // ví dụ đầu vào: mergeArr([2,3,6],[7,10]);mergeArr([2],[7,10]);
 function mergeArr(arr1, arr2) {
-  const arr3 = arr1.concat(arr2);
-  arr3.sort(function(a,b){return a - b});
-  return arr3.filter(function(item , index){
-    return arr3.indexOf(item) === index; 
-  });
+  return [];
 }
 
 export default {
