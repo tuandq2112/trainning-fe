@@ -28,6 +28,24 @@ function sumNumber(input) {
 // "hoc javascript that la vui" => 7 nguyên âm
 // "lam quen voi chuoi va mang" => 8 nguyên âm
 // ví dụ testcase: sumVowel("vidu");sumVowel("colen");
+
+function sumVowel(input) {
+  let number = 0;
+  let vowel = ["u", "e", "o", "a", "i"];
+  for(let i = 0; i < input.length; i++)
+  {
+    for(let j = 0; j <  vowel.length; j++)
+    {
+        if(input[i] === vowel[j])
+        {
+            number++;
+        }
+    }
+  }
+  console.log(number + " nguyên âm");
+  return number;
+}
+
 function sumVowel(input) {
   let number = 0;
   let vowel = ["u", "e", "o", "a", "i"];
@@ -41,6 +59,8 @@ function sumVowel(input) {
   console.log(number + " nguyên âm");
   return number;
 }
+
+
 
 // bài 3
 // Chuỗi nhị phân dài nhất
