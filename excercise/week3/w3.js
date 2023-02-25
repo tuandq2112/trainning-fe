@@ -6,7 +6,7 @@
 // "111" => 3
 // ví dụ đầu vào: sumNumber("1");sumNumber("45");
 function sumNumber(input) {
-  let arr= input.split('').map(Number);
+  let arr= input.split('').map(Number);// biến string thành array , dùng reduce
   let sum = 0;
   for (let i = 0; i < input.length; i++){
     sum += arr[i]
@@ -33,7 +33,7 @@ function sumVowel(input) {
   }
 
   return sumVowel ;
-}
+}//dùng filter->length lọc 
 
 // bài 3
 // Chuỗi nhị phân dài nhất
@@ -82,9 +82,13 @@ function sumNotFour(arr) {
 // [1,1,2,3,2] => [1,2,3]
 // ví dụ đầu vào: uniqueArr([1]);uniqueArr([1,1,1,1,2]);
 function uniqueArr(arr) {
-  return [];
+  let setArr = new Set(arr);
+  let newArr =[...setArr];
+  let sortedArr = newArr.sort(function(a, b){
+     return a - b;
+  });
+  return sortedArr;
 }
-
 // bài 6
 // cho 2 mảng có kích thước như nhau,
 // hãy trả ra số các phần tử giống nhau ở cùng 1 vị trí trong mảng
@@ -110,9 +114,12 @@ function equalTwoArr(arr1, arr2) {
 // [10,2] và [3,6,7] => [2,3,6,7,10]
 // ví dụ đầu vào: mergeArr([2,3,6],[7,10]);mergeArr([2],[7,10]);
 function mergeArr(arr1, arr2) {
-  return [];
+  const arr3 = arr1.concat(arr2);
+  arr3.sort(function(a,b){return a - b});
+  return arr3.filter(function(item , index){
+    return arr3.indexOf(item) === index; 
+  });
 }
-
 export default {
   sumNumber,
   sumVowel,
