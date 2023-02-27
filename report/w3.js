@@ -6,10 +6,9 @@
 // "111" => 3
 // ví dụ đầu vào: sumNumber("1");sumNumber("45");
 function sumNumber(input) {
-  return input.map(str => str[0].split('').reduce((acc, curr) => acc + parseInt(curr), 0));
+  let arr = input.split('').map(Number);
+  return arr = arr.reduce((acc, curr) => acc + parseInt(curr), 0)
 }
-
-
 
 // bài 2
 // Đếm số nguyên âm trong chuỗi. chuỗi bao gồm các chữ không in hoa
@@ -19,21 +18,11 @@ function sumNumber(input) {
 // "lam quen voi chuoi va mang" => 8 nguyên âm
 // ví dụ testcase: sumVowel("vidu");sumVowel("colen");
 function sumVowel(input) {
-  const vowels = ["a", "e", "i", "o", "u"];
-  const results = [];
-
-  for (let i = 0; i < input.length; i++) {
-    let str = input[i][0].toLowerCase();
-    let count = 0;
-    for (let j = 0; j < input.length; j++) {
-      if (vowels.indexOf(str[j]) !== -1) {
-        count++;
-      }
-    }
-    results.push(count);
-  }
-
-  return results;
+  const arr = input.split('').filter((char) => {
+    return 'aeiou'.indexOf(char) !== -1;
+  });
+  const count = arr.length;
+  return count;
 }
 
 // bài 3
@@ -43,13 +32,9 @@ function sumVowel(input) {
 // "10111011" => "111"
 // "01011001" => "11"
 // ví dụ đầu vào: sumNumber("111");sumNumber("101");
-function binaryMax(arr) {
-  return arr.map(str => {
-    str = str.toString();
-    const ones = str.replace(/^0+|0+$/g, '').split('0'); // loai bo 0 o dau va cuoi
-    const maxLength = Math.max(...ones.map(one => one.length));
-    return '1'.repeat(maxLength);
-  });
+function binaryMax(input) {
+  const arr = input.split('0').sort((a, b) => b - a);
+  return arr[0];
 }
 
 // bài 4
@@ -59,7 +44,13 @@ function binaryMax(arr) {
 // [1,2,3,4] => 3 (vì 3 không là ước cộng lại là 3)
 // ví dụ đầu vào: sumNotFour([1,2,3,4]);sumNotFour([1,1,1,1]);
 function sumNotFour(arr) {
-  return 0;
+  const result = arr.reduce((sum, value) => {
+    if ( 4 % value != 0) {
+      sum += value;
+    }
+    return sum;
+  }, 0);
+  return result;
 }
 
 // bài 5
@@ -70,7 +61,9 @@ function sumNotFour(arr) {
 // [1,1,2,3,2] => [1,2,3]
 // ví dụ đầu vào: uniqueArr([1]);uniqueArr([1,1,1,1,2]);
 function uniqueArr(arr) {
-  return [];
+  const uniqueSet = new Set(arr);
+  const unique_Sort = [...uniqueSet].sort((a, b) => a - b);
+  return unique_Sort;
 }
 
 // bài 6
@@ -81,7 +74,13 @@ function uniqueArr(arr) {
 // [0,1,0,1] vs [0,1,2,3] => 2 (vị trí thứ 1 và 2 giống nhau)
 // ví dụ đầu vào: equalTwoArr(2,[1,2],[1,3]);equalTwoArr(3,[1,2,3],[1,3,3]);
 function equalTwoArr(arr1, arr2) {
-  return 0;
+  var result = arr1.reduce((sum,value,index)=>{
+    if (value == arr2[index]){
+      sum++;
+    }
+    return sum;
+  },0);
+  return result;
 }
 
 // bài 7
@@ -92,10 +91,10 @@ function equalTwoArr(arr1, arr2) {
 // [10,2] và [3,6,7] => [2,3,6,7,10]
 // ví dụ đầu vào: mergeArr([2,3,6],[7,10]);mergeArr([2],[7,10]);
 function mergeArr(arr1, arr2) {
-  const mergedArr = arr1.concat(arr2);
-  mergedArr.sort(function(a, b) {
-    return a - b; // Sắp xếp các phần tử theo thứ tự tăng dần
-  });
+  const set = new Set([...arr1, ...arr2]);
+  const mergedArray = Array.from(set).concat().sort((a, b) => a - b);
+  return mergedArray;
+  
 }
 
 export default {
