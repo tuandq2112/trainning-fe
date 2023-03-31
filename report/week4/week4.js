@@ -11,7 +11,7 @@ function del(button) {
     for(var i = 0;i < cells.length - 1; i++)
     {
       var value = cells[i].innerHTML;
-      cells[i].innerHTML = "<input type = 'text' value = '" + value + "'>";
+      cells[i].innerHTML = "<input type='text' value='" + value + "'>";
     }
     button.innerHTML = "Save";
     button.setAttribute("onclick", "save(this)");
