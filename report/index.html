@@ -1,27 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link href="style.css" rel="stylesheet" />
     <sciprt src="main.js"></sciprt>
-</head>
-<body>
+  </head>
+  <body>
     <table class="zero" cellpadding="20" cellspacing="20">
-        <tr ><th class="1">ID</th>
+      <tr id="1">
+        <th class="1">ID</th>
         <th class="one">First</th>
         <th class="one">Last</th>
         <th class="one">Email</th>
         <th class="one">Phone</th>
-     <th class="one">Location</th>
+        <th class="one">Location</th>
         <th class="one">Hobby</th>
         <th class="one">Actions</th>
-    </tr>
-    <div id="e">
-    <tr>
-        
+      </tr>
+      <tr id="2">
         <td class="two">35</td>
         <td class="two">Jane</td>
         <td class="two">Smith</td>
@@ -29,11 +28,13 @@
         <td class="two">503-555-5555</td>
         <td class="two">Portland,Oregon</td>
         <td class="two">Photography</td>
-        <td class="two"><button class="four">Edit</button> <button class="five" onclick="myfunc()">Del</button></td>
+        <td class="two">
+          <button class="four">Edit</button>
+          <button class="five" onclick="myfunc(2)">Del</button>
+        </td>
       </tr>
-      </div>
-      <div id="r">
-      <tr >
+
+      <tr id="3">
         <td class="5">36</td>
         <td class="5">Tristan</td>
         <td class="5">Rodriguez</td>
@@ -41,11 +42,13 @@
         <td class="5">201-555-5555</td>
         <td class="5">New York,New York</td>
         <td class="5"></td>
-        <td class="5"><button class="four">Edit</button> <button class="five" onclick="myfunc1()">Del</button></td>
+        <td class="5">
+          <button class="four">Edit</button>
+          <button class="five" onclick="myfunc(2)">Del</button>
+        </td>
       </tr>
-    </div>
-<div id="s">
-      <tr >
+
+      <tr id="4">
         <td class="6">37</td>
         <td class="6">Andrea</td>
         <td class="6">Jones</td>
@@ -53,11 +56,13 @@
         <td class="6">503-555-5555</td>
         <td class="6">Portland,Oregon</td>
         <td class="6">Programming</td>
-        <td class="6"><button class="four">Edit</button> <button class="five" onclick="myfunc2()">Del</button></td>
-      </tr> 
-    </div>
-<div id="t"> 
-      <tr class="to">
+        <td class="6">
+          <button class="four">Edit</button>
+          <button class="five" onclick="myfunc(3)">Del</button>
+        </td>
+      </tr>
+
+      <tr id="5">
         <td class="7">38</td>
         <td class="7">Elliott</td>
         <td class="7">Richarson</td>
@@ -65,11 +70,13 @@
         <td class="7"></td>
         <td class="7">Boise,Idaho</td>
         <td class="7"></td>
-        <td class="7"><button class="four">Edit</button> <button class="five" onclick="myfunc3()">Del</button></td>
+        <td class="7">
+          <button class="four">Edit</button>
+          <button class="five" onclick="myfunc(4)">Del</button>
+        </td>
       </tr>
-    </div>
-<div id="y">
-      <tr id="y">
+
+      <tr id="6">
         <td class="8">39</td>
         <td class="8">June</td>
         <td class="8">Bug</td>
@@ -77,17 +84,18 @@
         <td class="8"></td>
         <td class="8"></td>
         <td class="8">Cooking</td>
-        <td class="8"><button class="four">Edit</button> <button class="five" onclick="myfunc4()">Del</button></td>
+        <td class="8">
+          <button class="four">Edit</button>
+          <button class="five" onclick="myfunc(5)">Del</button>
+        </td>
       </tr>
-    </div>
-      
     </table>
-    
-</body>
-<script>
-    function myfunc(){
-    var div= document.getElementbyId("e");
-    div.remove();
-}
-</script>
+  </body>
+  <script>
+    function myfunc(e) {
+      console.log(e);
+      var div = document.getElementById(e);
+      div.remove();
+    }
+  </script>
 </html>
