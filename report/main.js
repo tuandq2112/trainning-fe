@@ -1,20 +1,19 @@
 function myfunc(){
-    var div= document.getElementbyId("e");
-    div.remove();
+    document.getElementbyId("e").remove();
  }
  function myfunc1(){
-     var tr1= document.getElementbyId("r");
-     tr1.remove();
+     var div= document.getElementbyId("r").innerHTML;
+     div.remove();
   }
   function myfunc2(){
-     var div= document.getElementbyId("s");
+     var div= document.getElementbyId("s").innerHTML;
      div.remove();
   }
   function myfunc3(){
-     var div= document.getElementbyId("t");
+     var div= document.getElementbyId("t").innerHTML;
      div.remove();
   }
   function myfunc4(){
-     var div= document.getElementbyId("y");
+     var div= document.getElementbyId("y").innerHTML;
      div.remove();
   }
