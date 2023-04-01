@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User List - CRUD</title>
+    <link href="./mystyle.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Form điền và sửa thông tin -->
+    <form id="formInput">
+        <h3>Điền thêm thông tin của bạn vào đây:</h3>
+        <label>First:</label><br>
+        <input type="text" id="firstname" name="fname"><br>
+        <label>Last:</label><br>
+        <input type="text" id="lastname" name="lname"><br>
+        <label>Email:</label><br>
+        <input type="email" id="email"><br>
+        <label>Phone:</label><br>
+        <input type="number" id="phone"><br>
+        <label>Location:</label><br>
+        <input type="text" id="location"><br>
+        <label>Hobby:</label><br>
+        <input type="text" id="hobby"><br>
+        <button type="button" onclick="newData()">Thêm</button>
+    </form>
+    <!-- Bảng chứa thông tin users và actions-->
+    <br>
+    <br>
+    <table id="dataTable">
+        <tr id = "headers">            
+        </tr>
+        <tbody id = "data">
+        </tbody>
+        <tr id = "actions">
+        </tr>
+    </table>
+
+    
+    <script src="./myscript.js"></script>
+</body>
+</html>
