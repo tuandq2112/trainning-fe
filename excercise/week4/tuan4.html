@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title><link rel="stylesheet" href ="cau4.css">
+    <script src="tuan4.js"></script>
+
+</head>
+<body>
+  <div class="son">
+    <label for="">ID</label>
+ <br>   <input  type="number" id="id"  > </br>
+  </div>
+  <div class="son" >
+    <label for="">First</label>
+  <br>  <input type="text" id="first"> </br>
+  </div>
+  <div class="son">
+    <label for="">Last</label>
+   <br> <input type="text" id="last"><br>
+  </div>
+  <div class="son">
+    <label for="">Email</label>
+  <br>  <input type="text" id="email"><br>
+  </div>
+  <div class="son">
+    <label for="">Phone</label>
+  <br>  <input type="number" id="phone">  </br>
+  </div>
+  <div class="son" >
+    <label for="">Location</label>
+    <br> <input type="text" id="location"> </br>
+    <div class="son" >
+      <label for="">Hobby</label> 
+     <br> <input type="text" id="hobby">    </br>
+  </div>
+  <div class="son">
+   <button onclick="add()">Create</button>
+  </div>
+    <table class="table" id="render">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>First</th>
+          <th>Last</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Location</th>
+          <th>Hobby</th>
+          <th>Actions</th>
+        </tr> 
+        </thead>
+    </table>
+ 
+  <script>
+    var data=[]
+   function add(){
+      var item_id= document.getElementById("id").value
+      var item_first= document.getElementById("first").value
+      var item_last= document.getElementById("last").value
+      var item_email= document.getElementById("email").value
+      var item_phone= document.getElementById("phone").value
+      var item_location= document.getElementById("location").value
+      var item_hobby= document.getElementById("hobby").value
+          
+      var item ={
+        Id :item_id,
+        First :item_first,
+        Last :item_last,
+        Email :item_email,
+        Phone :item_phone,
+        Location :item_location,
+        Hobby :item_hobby,
+      }
+        data.push(item)
+        render()
+        clear()
+      }
+      function render(){
+        table = ` <tr>
+          <th>ID</th>
+          <th>First</th>
+          <th>Last</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Location</th>
+          <th>Hobby</th>
+          <th>Action</th>
+          </tr>`
+          for(let i=0;i<data.length;i++){
+            table +=  `<tr>
+          <td>${data[i].Id}</td>
+          <td>${data[i].First}</td>
+          <td>${data[i].Last}</td>
+          <td>${data[i].Email}</td>
+          <td>${data[i].Phone}</td>
+          <td>${data[i].Location}</th>
+          <td>${data[i].Hobby}</th>
+          <th>  <button class="cong" onclick="deleteItem(${data[i].id})">Del</button> </th>
+          </tr>`
+          }
+           document.getElementById("render").innerHTML= table
+      }
+      function clear(){
+        document.getElementById("id").value="";
+        document.getElementById("first").value="";
+        document.getElementById("last").value="";
+        document.getElementById("email").value="";
+        document.getElementById("phone").value="";
+        document.getElementById("location").value="";
+        document.getElementById("hobby").value="";
+
+      }
+      function deleteItem(a){
+        for(let i=0;i<data.length;i++){
+            if(data[i].Id==a){
+                data.splice(i,1)
+                render()
+            }
+        }
+      }
+  </script>       
+</body>
+</html>
