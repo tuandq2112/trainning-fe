@@ -1,0 +1,53 @@
+{
+  "note": "map các trường trong data lên giao diện",
+  "data": [
+    {
+      "id": 1,
+      "first": "Ngô",
+      "last": "Hiếu",
+      "email": "Ngohieu1811@gmail.com",
+      "phone": "0961745160",
+      "location": "Hai bà trưng"
+    },
+    {
+      "id": 2,
+      "first": "Đỗ",
+      "last": "Tuấn",
+      "email": "tuando@gmail.com",
+      "phone": "012345678",
+      "location": "Hà Nội"
+    },
+    {
+      "id": 3,
+      "first": "Quang",
+      "last": "Hiếu",
+      "email": "quanghieu@gmail.com",
+      "phone": "0988888888",
+      "location": "Lê Duẩn"
+    },
+    {
+      "id": 4,
+      "first": "Quốc",
+      "last": "Tuấn",
+      "email": "tuanquoc@gmail.com",
+      "phone": "016222222222",
+      "location": "Trần Đại Nghĩa"
+    },
+    {
+      "id": 5,
+      "first": "Hiếu",
+      "last": "Bắp",
+      "email": "quanghieu@gmail.com",
+      "phone": "0988888888",
+      "location": "Xã Đàn"
+    },
+    {
+      "id": 6,
+      "first": "Tuấn",
+      "last": "Đỗ",
+      "email": "tuando@gmail.com",
+      "phone": "099992828282",
+      "location": "Giải Phóng"
+    }
+  ]
+}
