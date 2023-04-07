@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .wrap {
+        border: 1px solid gray;
+        padding: 0 15px 15px;
+        height: 90vh;
+        overflow: hidden;
+        align-self: center;
+      }
+      h2{
+        text-align: center;
+        text-transform: uppercase;
+        color: darkblue;
+        border-bottom: 1px solid;
+        margin: 10px;
+        padding-bottom: 5px;
+      }
+      .container {
+        display: flex;
+        height: 85%;
+      }
+      .wrap-table {
+        overflow-y: scroll;
+        margin-right: 20px;
+      }
+      th {
+        min-width: 30px;
+      }
+      th {
+        padding: 8px;
+        border-top: 1px solid #ddd;
+        border-bottom: 2px solid #ddd;
+      }
+      table {
+        border-collapse: collapse;
+      }
+      tbody {
+        overflow: scroll;
+      }
+      td {
+        text-align: center;
+        /* padding: 5px; */
+        padding: 8px 15px;
+        border-bottom: 1px solid #ddd;
+      }
+      td:first-child {
+        font-weight: bold;
+      }
+      .wrapper {
+        display: flex;
+        justify-content: space-around;
+      }
+      label {
+        min-width: 100px;
+      }
+      .class-form {
+        border: 3px solid #777;
+        padding: 18px;
+        border-radius: 8px;
+        /* width: 20%; */
+        display: flex;
+        flex-direction: column;
+        overflow: scroll;
+      }
+      label {
+        color: darkblue;
+        margin-bottom: 3px;
+      }
+      input {
+        margin: 0 auto;
+        width: 250px;
+        border: 1px solid #aaa;
+        border-radius: 4px;
+        padding: 7px 10px;
+        margin-bottom: 10px;
+      }
+      .class-form > button {
+        background-color: cornflowerblue;
+        padding: 10px;
+        color: white;
+        border-radius: 8px;
+        border: none;
+        margin-top: 5px;
+        cursor: pointer;
+      }
+      .edit,
+      .del {
+        background-color: gold;
+        padding: 7px;
+        border-radius: 4px;
+        border: none;
+        margin: 0 3px;
+        cursor: pointer;
+      }
+      .del {
+        background-color: crimson;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <h2>thêm sửa xóa với html + css + js</h2>
+      <div class="container">
+        <div class="wrap-table">
+          <table>
+            <thead>
+              <tr class="head">
+                <th>ID</th>
+                <th>First</th>
+                <th>Last</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Location</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="data-table"></tbody>
+          </table>
+        </div>
+
+        <div class="class-form">
+          <label>First</label>
+          <input />
+
+          <label>Last</label>
+          <input />
+
+          <label>Email</label>
+          <input />
+
+          <label>Phone</label>
+          <input />
+
+          <label>Location</label>
+          <input />
+
+          <button id="button" onclick="onCreate()">Create</button>
+        </div>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
