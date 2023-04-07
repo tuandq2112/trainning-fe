@@ -36,6 +36,8 @@ createButton.addEventListener("click", event => {
 
   if (createButton.dataset.mode === "edit") {
     // Lưu dữ liệu đã chỉnh sửa
+
+    // ===> em không đánh data-id cho các td ở đầu thì sao mà query được
     const targetRow = document.querySelector(`#user-list tr td:first-child[data-id="${createButton.dataset.id}"]`).parentNode;
     targetRow.querySelector("td:nth-child(2)").textContent = formData["first-name"].value;
     targetRow.querySelector("td:nth-child(3)").textContent = formData["last-name"].value;
@@ -51,7 +53,7 @@ createButton.addEventListener("click", event => {
     // Thêm dữ liệu mới
     const row = document.createElement("tr");
     row.innerHTML = `
-      <td>${Math.floor(Math.random() * 100)}</td>
+      <td data-id="${createButton.dataset.id}">${Math.floor(Math.random() * 100)}</td>
       <td>${formData["first-name"].value}</td>
       <td>${formData["last-name"].value}</td>
       <td>${formData["email"].value}</td>

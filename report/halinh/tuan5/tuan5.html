@@ -54,8 +54,10 @@
           const userList = document.getElementById("user-list");
           data.data.forEach(user => {
             const row = document.createElement("tr");
+            
+            // ===> Thêm data-id cho các td ở đầu thì lúc edit mới edit được chứ
             row.innerHTML = `
-              <td>${user.id}</td>
+              <td data-id="${user.id}">${user.id}</td>
               <td>${user.first}</td>
               <td>${user.last}</td>
               <td>${user.email}</td>
