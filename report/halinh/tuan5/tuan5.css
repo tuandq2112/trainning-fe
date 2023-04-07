@@ -1,0 +1,55 @@
+#user-table {
+  width: 60%;
+  float: left;
+}
+
+td, th {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+#form-container {
+  width: 35%;
+  float: right;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.form-row {
+  margin-bottom: 10px;
+}
+
+label {
+  display: inline-block;
+  width: 100px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 250px;
+}
+
+button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#create-button {
+  background-color: blue;
+  color: #fff;
+}
+
+.edit-button {
+  background-color: yellow;
+  color: #000;
+}
+
+.del-button {
+  background-color: red;
+  color: #fff;
+}
