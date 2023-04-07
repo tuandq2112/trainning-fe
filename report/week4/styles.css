@@ -1,0 +1,95 @@
+body{
+    border: 2px solid rgb(14, 17, 14);
+    
+    margin: 16px;
+    width: 95%;
+    height: 100%;
+    padding: 10px;
+    font-size: 18px;
+    
+    
+}
+
+
+button{
+    margin: 5px;
+    padding: 5px;
+    width: 95%;
+    border-radius: 5px;
+}
+
+
+#nhap{
+    float: right;
+    border: 3px solid rgb(98, 101, 98);
+    border-radius:20px ;
+    width: 20%;
+    
+    padding-left: 10px;
+    font-size: 15px;
+    
+}
+table {
+    border-collapse: collapse;
+}
+  
+tr {
+    border-bottom: 0.5pt solid rgb(133, 132, 129);
+}
+
+td{
+    width: auto;
+    padding: 10px;
+   
+}
+
+
+
+.but{
+    width: 150px;
+}
+
+.add{
+    background-color: rgb(39, 123, 226);
+}
+
+.edit {
+    background-color: orange;
+    border-radius: 5px;
+    font-size: 20px;
+    width: 33.33%;
+    padding:1px;
+    margin: 0px;
+}
+
+.delete{
+    background-color: rgb(241, 37, 10);
+    font-size: 20px;
+    border-radius: 5px;
+    width: 33.33%;
+    padding:1px;
+
+}
+.save{
+    background-color: orange;
+    font-size: 20px;
+    border-radius: 5px;
+    display: none;
+    width: 33.33%;
+    padding:1px;
+   
+    
+}
+
+p{
+    font-size: 24px;
+}
+
+
+input{
+    margin: 5px;
+    padding: 5px;
+    width: 90%;
+    border-radius: 5px;
+    border-color: rgb(126, 135, 135);
+}

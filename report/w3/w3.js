@@ -6,7 +6,7 @@
 // "111" => 3
 // ví dụ đầu vào: sumNumber("1");sumNumber("45");
 function sumNumber(input) {
-    let a = parseInt(input);
+    let a = parseInt(input);// dùng reduce
     let sum = 0;
     for (let i = 0; a > 0; i++){
       sum += a%10;
@@ -30,7 +30,7 @@ function sumVowel(input="") {
       count++
   }
   return count;  
-
+ // dùng filter
 }
 
 // bài 3
@@ -58,7 +58,7 @@ function binaryMax(input="") {
   }
 
   return input.substring(s,s+ans);
-}
+} // dùng split() -> sort
 
 // bài 4
 // Tính tổng dãy số không phải là ước của 4 trong dãy.
