@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User List - CRUD</title>
+    <link href="./mystyle.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Bảng chứa thông tin users và actions-->
+    <h1 id="heading">THÊM SỬA XÓA VỚI HTML + CSS + JS</h1>
+    <div class="divider">.</div>
+    <div id="bgForm">
+        <table id="dataTable">
+            <tr id = "headers">            
+            </tr>
+            <tbody id = "data">
+            </tbody>
+            <tr id = "actions">
+            </tr>
+        </table>
+            <!-- Form điền và sửa thông tin -->
+        <form id="formInput">
+            <label>First:</label><br>
+            <input type="text" id="firstname" name="fname"><br>
+            <label>Last:</label><br>
+            <input type="text" id="lastname" name="lname"><br>
+            <label>Email:</label><br>
+            <input type="email" id="email"><br>
+            <label>Phone:</label><br>
+            <input type="number" id="phone"><br>
+            <label>Location:</label><br>
+            <input type="text" id="location"><br>
+            <button type="button" style="background-color: lightblue;" onclick="newData()">Thêm</button>
+        </form>
+    </div>    
+    <script src="./newscript.js"></script>
+</body>
+</html>

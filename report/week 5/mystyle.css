@@ -1,0 +1,61 @@
+body {
+    position: relative;
+    border: 3px solid lightslategray;
+}
+
+#heading {
+    display: flex;
+    color: blue;
+    font-weight: bolder;
+    position: flex;
+    justify-content: center;
+}
+
+.divider{
+    margin-top: -35px;
+    margin-left: 40px;
+    margin-right: 40px;
+    border-bottom: 2px solid blue;
+}
+
+#dataTable {
+    position: absolute;
+    float: left;
+
+}
+
+#formInput{
+    position: absolute;
+    float: right;
+    border: 2px solid grey;
+    border-radius: 5%;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+label {
+    color: blue;
+    font-weight: bold;
+}
+
+table {
+    border-collapse: collapse;
+  }
+  tr { 
+    border: solid red;
+    border-width: 1px 0;
+  }
+
+.editBtn{
+    background-color: yellowgreen;
+    border: 2px solid grey;
+    border-radius: 20%;
+}
+.deleteBtn{
+    background-color: rgb(230, 56, 13);
+    color: aliceblue;
+    border: 2px solid grey;
+    border-radius: 20%;
+}
