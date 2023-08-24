@@ -1,121 +1,95 @@
-# Bài tập tuần 1
----
-## I. Đề bài
+const data = [
+  {
+    id: 1,
+    first: "Ngô",
+    last: "Hiếu",
+    email: "Ngohieu1811@gmail.com",
+    phone: "0961745160",
+    location: "Hai bà trưng",
+  },
+  {
+    id: 2,
+    first: "Đỗ",
+    last: "Tuấn",
+    email: "tuando@gmail.com",
+    phone: "012345678",
+    location: "Hà Nội",
+  },
+  {
+    id: 3,
+    first: "Quang",
+    last: "Hiếu",
+    email: "quanghieu@gmail.com",
+    phone: "0988888888",
+    location: "Hai bà trưng",
+  },
+  {
+    id: 4,
+    first: "Quốc",
+    last: "Tuấn",
+    email: "tuanquoc@gmail.com",
+    phone: "016222222222",
+    location: "Cầu Dền",
+  },
+];
+function getData() {
+  const inputs = document.getElementsByTagName("input");
+  return {
+    first: inputs[0].value,
+    last: inputs[1].value,
+    email: inputs[2].value,
+    phone: inputs[3].value,
+    location: inputs[4].value,
+  };
+}
+function getNodeRow(idx, data) {
+  const payload = data ? data : getData();
+  const tr = document.createElement("tr");
+  tr.innerHTML = `
+      <td>${idx}</td>
+      <td>${payload?.first}</td>
+      <td>${payload?.last}</td>
+      <td>${payload?.email}</td>
+      <td>${payload?.phone}</td>
+      <td>${payload?.location}</td>
+  `;
+  const lastTd = document.createElement("td");
+  const btn = document.createElement("button");
+  btn.innerText = "Edit";
+  btn.onclick = editLine(tr, idx);
+  lastTd.append(btn);
+  tr.append(lastTd);
+  return tr;
+}
+function editLine(tr, idx) {
+  return function () {
+    const newTr = getNodeRow(idx);
 
-<ol>
-    <li>Tạo 1 file html có nội dung giống như table.png</li>
-</ol>
+    document.getElementById("data-table").replaceChild(newTr, tr);
+  };
+}
+function addLine(data, idx) {
+  tr = getNodeRow(idx, data);
 
-## II. Yêu cầu
-<ol>
-    <li>Dựng ui giống với ảnh</li>
-    <li>Thực hiện được chức năng xóa, khi ấn nút xóa thì xóa hàng đi</li>
-</ol>
+  document.getElementById("data-table").appendChild(tr);
+}
 
-???html, css
-các thuộc tính
-display: flex
-justify-content
-padding: 1px 2px 3px 4px
-margin: 1px 2px 3px 4px, auto
-width, height: 100%
-flex: 1
-position: absolute,relative
+function updateTable() {
+  for (let i = 0; i < data.length; i++) {
+    addLine(data[i], i);
+  }
+}
 
-với document.getElementById() nhớ
-style
-children
+document.getElementById("button").onclick = function onCreate() {
+  addLine(data);
+};
 
+updateTable();
 
-???Khai báo
-ôn lại khai báo const,let?
-dùng vòng lặp for,điều kiện if như nào?
-khai báo biến thì giá trị mặc định của biến là gì?
-nhớ về toán tử so sánh ==, ===
-Một số hàm toán học Math.round, Math.ceil, Math.floor,...
-parseInt
-toán tử logic !,&&,||
+10 html css (4,3,3)
+1,
+a, thêm c1 
 
-
-???String
-ôn các ký tự "", '', ``
-đưa giá trị của 1 biến vào chuỗi dùng ``
-
-
-
-???array iteration
-includes
-find
-findIndex
-every
-filter
-some
-map
-reduce((a,b)): nhớ a,b là gì
-có thay đổi mảng không hay chỉ trả ra kết quả?
-
-???array method
-splice: nhớ các tham số đầu vào
-join
-pop
-push
-concat
-có thay đổi mảng không hay chỉ trả ra kết quả?
-
-
-Object????
-khai báo object
-tham chiếu và tham trị
-truy cập giá trị trong object
-x = {a: {b:2}}
-x.a.b
-x["a"]
-Object.create()
-objectA === objectB trả về true/false trong tình huống nào
-a = {};
-b = a;
-thay đổi giá trị của a thì b có thay đổi theo không?
-
-
-????? Convert kiểu trong javascript
-Có 6 kiểu
-object,string,boolean,number(ôn cả NaN),null,undefined
-
-trong phép toán LOGIC thì các giá trị nào 
-được convert sang false/true
-
-ôn lại các trường hợp như:
-{},[],null,undefined,1,0,"",NaN, "false",...
-nếu đưa vào if(null){} chẳng hạn thì tương ứng 
-là true hay false
-
-ví dụ:
-const a = null?1:2;
-const b = !undefined?1:2;
-const c = -1?1:2;
-thì giá trị của a,b,c là bao nhiêu?
-
-
-với phép toán + thì các kiểu trên được convert 
-sang giá trị tương ứng là bao nhiêu
-nhớ + còn là nối chuỗi. thì trường hợp nào nỗi chuỗi 
-trường hợp nào là phép cộng
-
-vd:
-1+1=?
-1+'1'=?
-true+false=?
-undefined+1=?
-...
-
-boolean|number|object + number = ???
-null|undefined + number = ???
-string + number = ???
-number + number = ???
-
-Với phép -,*,/ thì là phép toán số học thì
-boolean|number|object|string|null - number = kiểu gì
-undefined - number = kiểu gì
 
 /1, chọn phương án đúng để chữ "Cho tôi ra giữa" nằm giữa thẻ div
 a, thêm justify-content:center vào style của div
@@ -176,7 +150,7 @@ a, thêm vào style div(a) và div(b) margin-top: -25px
 .a, document.getElementById("a").children[0].style.background = "blue";
 b, document.getElementById("b").background = "blue";
 c, document.getElementById("a").style = {background: "blue"}
-.d, document.getElementById("b1").style.background = "blue";
+.d, document.getElementById("b").style.background = "blue";
 
 /11, chọn phương án để cùng màu xanh chiếm hết vùng màu đỏ
 a, thêm vào div(a) style position: relative;
@@ -186,63 +160,26 @@ c, thêm style width: 100% ở div div(c)
 
 // ++++++++++++++++
 12/
-var a=1, b = a+ 1;
-a += a + b;
+let a = 1;
+let b = -1;
+b += a - b;
+
 chọn đáp án đúng:
-a, a=1;
-b, a=2;
-c, a=3;
-.d, a=4;
+.a, b=1;
+b, b=2;
+c, b=3;
+d, b=4;
 
-13/
-const a = 1;
-let b = 2
-a+=b;
-Cho biết kết quả của a:
-a, 1
-b, 2
-c, 3
-.d, Chương trình lỗi
+13/ 
+let a = 1, b;
+b = a + b;
+chọn đáp án đúng:
+a, b=1;
+b, b='01';
+c, lỗi không chạy được;
+.d, NaN;
 
-14/ 
-let a=1;
-let a=2;
-Giá trị của a sau đoạn chương trình trên
-a, 1
-.b, 2
-c, Lỗi chương trình
-
-15/
-let a=13,b;
-Chọn các đáp án để b nhận giá trị "câu 13: nối chuỗi":
-.a, "Câu " + a + ": nối chuỗi"
-b, 'Câu {a}: nối chuỗi`
-.c, `Câu ${a}: nối chuỗi`
-d, "Câu ${a}: nối chuỗi"
-e, `Câu {a}: nối chuỗi`
-
-16/
-let a,b=1;
-let c=a+b;
-Giá trị của a,b,c lần lượt là:
-a, null,1,NaN
-a, 0,1,1
-.c, undefined,1,NaN
-d, null,1,null
-
-17/
-const a = [1,2,3];
-a[1]++;
-a[2] = a[1];
-a[3] = 3
-Giá trị của a sau đoạn code trên:
-a, [2,2,3]
-b, [1,2,3]
-.c, [1,3,3,3]
-d, [1,3,3]
-
-
-18/
+14/
 var a = 1, b = a;
 a += a + b;
 chọn đáp án đúng:
@@ -251,46 +188,45 @@ b, a=2;
 .c, a=3;
 d, a=0;
 
-
-19/
-let a=1,b=2;
-if(a&&b){
-  a=10;
-}else{
-  a=20;
-}
-Giá trị của a sau đoạn chương trình trên là:
-.a, 10
-b, 20
-c, NaN
-d, lỗi chương trình
-
-20/
-let a=0,b=a;
-if(a||!b){
-  a+="1";
-}else{
-  a=20;
-}
-Giá trị của a sau đoạn chương trình trên là:
-a, 1
-.b, "01"
-c, NaN
-d, 20
-
-21/
-let a;
-for(let i=1;i<5;i++){
-  a+= i;
-}
-Giá trị của a sau đoạn chương trình trên là
-a, 0
-b, 10
-.c, NaN
-d, lỗi chương trình
+15/ 
+let a= 1;
+let b= '1';
+Kết quả của phép tính a-b là:
+.a, 0
+b, lỗi
+c, "0"
+d, ""
 
 
-22,----
+15/ 
+let a=1;
+let b='1';
+Kết quả của phép logic a==b là:
+.a, true
+b, false
+
+
+16, 
+let a=true;
+let b=a+true;
+a+=a-b;
+Giá trị của a là:
+a, false
+b, true
+.c, 0
+d, 1
+
+17
+let a='1';
+let b=false;
+a = a + b;
+Giá trị của a là:
+a, true
+b, '1'
+.c, 1
+d, '0'
+
+18,
 let a=null,b,c="",d="1",e="a",f=1;
 Cho biết kết quả của 4 phép tính sau:
 a+b;c-d;d-!e;d+f;
@@ -300,30 +236,58 @@ b, NaN, NaN, NaN, "11"
 .c, NaN, -1, 1, "11"
 d, 0, NaN, NaN, 2
 
-23----
+19
 let a=null,b=true,c="true",d="11";
-Cho biết kết quả của 4 phép tính sau:
-!a+b;b+c;a+b+!!c;d-b;
-a, NaN, NaN, NaN, NaN
-b, NaN, 2, 3, 10
-c, NaN, 'truetrue', 3, 10
-.d, 2, 'truetrue', 2, 10
+!a+b;b+c;a+b+!!c
 
-24, --------
-const a = x?1:2;
-Với các giá trị x nào dưới đây để a nhận giá trị là 2
-a, 0,null,"1",undefined,!NaN,false,!true,!"false"
-b, 0,null,"0",!undefined,NaN,!!false,!true,!"false"
-c, 0,null,"",undefined,!NaN,!!false,!true,!"false"
-.d, 0,null,"",!!undefined,NaN,!!false,!true,!"false"
+.valueOf.apply.apply.
 
-25,------
-const a = x?1:2;
-Với các giá trị x nào dưới đây để a nhận giá trị là 1
-a, 1+1,0-true,"false",!"",1-"-1",!1+null,!{}
-b, 1+1,0+true,!"false","",1-"-1",!undefined+"",{}
-c, 1-1,0-true,"false",!"",1-"-1",!undefined+1,{}
-.d, 1+1,0-true,"false",!"",1-"-1",!undefined+null,{}
+16/ 
+let a=2;
+let b = '3';
+a*b;
+
+17/
+let a = 1;
+let b = 1;
+if(a-1){
+  b=2;
+}else{
+  b=3;
+}
+
+17/
+let a = 1;
+if(a-1){
+  b=2;
+}else{
+  b=3;
+}
+
+17/
+let a = 1;
+if(a-1){
+  b=2;
+}else{
+  b=3;
+}
+
+
+//20 array
+19,
+const a = {};
+a.b?
+
+//////
+24,
+const a = {first: "a"};
+a["first"] + " " + a.last 
+
+25,
+const a = {a: "1",b:"2"};
+a["b"] = {a: "a",b:"b"};
+a[b.c]?
+
 
 ////// --------------
 26

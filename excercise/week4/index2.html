@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .wrap {
+        border: 1px solid gray;
+        padding: 0 15px 15px;
+        height: 90vh;
+        overflow: hidden;
+        align-self: center;
+      }
+      h2{
+        text-align: center;
+        text-transform: uppercase;
+        color: darkblue;
+        border-bottom: 1px solid;
+        margin: 10px;
+        padding-bottom: 5px;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+      }
+      .wrap-table {
+        overflow-y: scroll;
+        margin-right: 20px;
+      }
+      th {
+        min-width: 30px;
+      }
+      th {
+        padding: 8px;
+        border-top: 1px solid #ddd;
+        border-bottom: 2px solid #ddd;
+      }
+      table {
+        border-collapse: collapse;
+      }
+      tbody {
+        overflow: scroll;
+      }
+      td {
+        text-align: center;
+        /* padding: 5px; */
+        padding: 8px 15px;
+        border-bottom: 1px solid #ddd;
+      }
+      td:first-child {
+        font-weight: bold;
+      }
+      .wrapper {
+        display: flex;
+        justify-content: space-around;
+      }
+      label {
+        min-width: 100px;
+      }
+      .class-form {
+        border: 3px solid #777;
+        padding: 18px;
+        border-radius: 8px;
+        /* width: 20%; */
+        display: flex;
+        flex-direction: column;
+        overflow: scroll;
+      }
+      label {
+        color: darkblue;
+        margin-bottom: 3px;
+      }
+      input {
+        margin: 0 auto;
+        width: 250px;
+        border: 1px solid #aaa;
+        border-radius: 4px;
+        padding: 7px 10px;
+        margin-bottom: 10px;
+      }
+      .class-form > button {
+        background-color: cornflowerblue;
+        padding: 10px;
+        color: white;
+        border-radius: 8px;
+        border: none;
+        margin-top: 5px;
+      }
+      .edit,
+      .del {
+        background-color: gold;
+        padding: 7px;
+        border-radius: 4px;
+        border: none;
+        margin: 0 3px;
+      }
+      .del {
+        background-color: crimson;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="">
+      <h2>thêm sửa xóa với html + css + js</h2>
+      <div class="">
+        Câu 1.
+      <br />
+      <div style="border: 1px solid;">Cho tôi ra giữa</div>
+      <br />
+      Câu 2.
+      <div style="width: 200px; background: red;padding: 10px 0; border-radius: 30px;text-align: center;">Thi trắc nghiệm</div>
+      Câu 3.
+      <div id="a" style="width: 60px;height:60px;background: green;">
+        <div style="width: 60px; height: 60px; background: yellow;">Padding</div>
+      </div>
+      Câu 4.
+      <div id="a" style="display: flex; width: 150px;border: 1px solid;position: relative; padding: 10px 0">
+        <div id="b" style="height: 20px;">Thi HTML,CSS</div>
+        <div id="c" style="width: 10px; background-color: gray;">x</div>
+      </div>
+      Câu 5.
+      <div style="display: flex;">
+        <div style="width: 100px; height: 50px; background: red">Hộp A</div>
+        <div id="a" style="height: 50px; background: green;width: 100%;">Hộp B</div>
+      </div>
+
+      Câu 6.
+      <div id="a" style="width: 150px;border: 1px solid;position: relative; padding: 30px 0">
+        <div id="b" style="text-align: center;">Thi HTML</div>
+        <div id="c" style="position: absolute;text-align: center; background-color: green;">Submit</div>
+      </div>
+
+      
+
+      Câu 7.
+      <div id="a" style="display: flex;position: relative;">
+        <div id="b" style="width: 100px; height: 50px; background: red;position: absolute;left: 100px">Hộp A</div>
+        <div id="c" style="width: 100px; height: 50px; background: green;">Hộp B</div>
+        <div id="d" style="width: 100px; height: 50px; background: blue; left: 100px">Hộp C</div>
+      </div>
+
+      Câu 8.
+      <div id="a" style="display: flex;">
+        <div style="width: 100px; height: 50px; background: red">Hộp A</div>
+        <div style="width: 100px; height: 50px; background: green;left:auto">Hộp B</div>
+      </div>
+
+      Câu 9.
+      <div id="a" style="background: red">
+        <div style="height: 100px"></div>
+      </div>
+      <div id="b" style="background: green; height: 50px;margin-top: -50px;"></div>
+
+      Câu 10.
+      <div id="a" style="width: 100%; height: 40px; background: red">
+        <div id="b1" style="width: 100%; height: 100%; background: red"></div>
+      </div>
+
+      Câu 11.
+      <div id="a" style="width: 100%; background: red">
+        <div id="b" style="width: 20%; height: 40px; position: relative">
+          <div id="c" style="top: 0;bottom: 0;left: 0;right: 0;background: green; position: absolute;"></div>
+        </div>
+      </div>
+        <!-- <div class="wrap-table">
+          <table>
+            <thead>
+              <tr class="head">
+                <th>ID</th>
+                <th>First</th>
+                <th>Last</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Location</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="data-table"></tbody>
+          </table>
+        </div>
+
+        <div class="class-form">
+          <label>First</label>
+          <input />
+
+          <label>Last</label>
+          <input />
+
+          <label>Email</label>
+          <input />
+
+          <label>Phone</label>
+          <input />
+
+          <label>Location</label>
+          <input />
+
+          <button id="button" onclick="onCreate()">Create</button>
+        </div> -->
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
